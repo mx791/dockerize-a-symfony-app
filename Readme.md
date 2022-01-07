@@ -3,7 +3,6 @@
 ## Description
 Nous utilisons PHP 7.4 avec Apache 2.
 
-
 ## Utilisation
 Pour builder l'image
 ```
