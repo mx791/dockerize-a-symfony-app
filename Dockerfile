@@ -7,6 +7,7 @@ COPY ./apache/opcache.ini /usr/local/etc/php/conf.d/opcache.ini
 COPY --from=composer /usr/bin/composer /usr/local/bin/composer
 WORKDIR /var/www/html
 RUN composer install
+RUN composer dump-autoload --no-dev --classmap-authoritative
 
 RUN docker-php-ext-install pdo_mysql opcache
 RUN a2enmod rewrite
